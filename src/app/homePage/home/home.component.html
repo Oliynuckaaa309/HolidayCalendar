@@ -1,0 +1,30 @@
+<section>
+  <div class="search-container">
+    <mat-form-field appearance="outline" class="custom-style">
+      <mat-label>Search</mat-label>
+      <input matInput (input)="searchCountries($event)" placeholder="Search" />
+    </mat-form-field>
+  </div>
+</section>
+<section>
+  <h3 class="main-title">Results:</h3>
+</section>
+<section class="cards">
+  <ng-container *ngIf="resultCountries.length === 0">
+    <div *ngFor="let randomCountry of randomCountries" class="random-country">
+      <p>{{ randomCountry.name }}</p>
+      <p>{{ randomCountry.holiday }}</p>
+      <p>{{ randomCountry.date }}</p>
+    </div>
+  </ng-container>
+
+  <mat-card *ngFor="let country of resultCountries">
+    <a
+      class="country-link"
+      routerLink="/country/{{ country.countryCode }}"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page">
+      {{ country.name }}
+    </a>
+  </mat-card>
+</section>

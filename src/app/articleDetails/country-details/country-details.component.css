@@ -1,0 +1,39 @@
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.home-button {
+  margin: 30px 10px;
+}
+.holiday-info > p {
+  display: block;
+  min-width: 30%;
+  font-size: 20px;
+  font-family: "Book Antiqua";
+}
+.holiday-info {
+  display: flex;
+}
+.container {
+  position: relative;
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+}
+.year-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.country-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 300px;
+  z-index: 1;
+  color: black;
+  background-color: white;
+}
